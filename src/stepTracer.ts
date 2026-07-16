@@ -56,9 +56,10 @@ function generateTraceChartForSteps(job: WorkflowJobType): string {
 
   const postContentItems: string[] = [
     '',
-    '### Step Trace',
-    '',
-    '```mermaid' + '\n' + chartContent + '\n' + '```'
+    '<details>',
+    '<summary>Step Trace</summary>',
+    '```mermaid' + '\n' + chartContent + '\n' + '```',
+    '</details>'
   ]
   return postContentItems.join('\n')
 }

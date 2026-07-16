@@ -31080,23 +31080,19 @@ function reportWorkflowMetrics() {
             : null;
         const postContentItems = [];
         if (cpuLoadContent) {
-            postContentItems.push('### CPU Metrics', '', cpuLoadContent, '');
+            postContentItems.push('<details>', '<summary>CPU Metrics</summary>', '', cpuLoadContent, '</details>');
         }
         if (memoryUsageContent) {
-            postContentItems.push('### Memory Metrics', '', memoryUsageContent, '');
-        }
-        if ((networkIOReadContent && networkIOWriteContent) ||
-            (diskIOReadContent && diskIOWriteContent)) {
-            postContentItems.push('### IO Metrics', '');
+            postContentItems.push('<details>', '<summary>Memory Metrics</summary>', '', memoryUsageContent, '</details>');
         }
         if (networkIOReadContent && networkIOWriteContent) {
-            postContentItems.push(`#### Network I/O (Read)`, '', networkIOReadContent, '', `#### Network I/O (Write)`, '', networkIOWriteContent, '');
+            postContentItems.push('<details>', `<summary>Network I/O (Read)</summary>`, '', networkIOReadContent, '</details>', '<details>', `<summary>Network I/O (Write)</summary>`, '', networkIOWriteContent, '</details>');
         }
         if (diskIOReadContent && diskIOWriteContent) {
-            postContentItems.push(`#### Disk I/O (Read)`, '', diskIOReadContent, '', `#### Disk I/O (Write)`, '', diskIOWriteContent, '');
+            postContentItems.push('<details>', `<summary>Disk I/O (Read)</summary>`, '', diskIOReadContent, '</details>', '<details>', `<summary>Disk I/O (Write)</summary>`, '', diskIOWriteContent, '</details>');
         }
         if (diskSizeUsageContent) {
-            postContentItems.push('### Disk Size Metrics', '', diskSizeUsageContent, '');
+            postContentItems.push('<details>', '<summary>Disk Size Metrics</summary>', '', diskSizeUsageContent, '</details>');
         }
         return postContentItems.join('\n');
     });
