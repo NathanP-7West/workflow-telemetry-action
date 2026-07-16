@@ -1,6 +1,6 @@
 {
   "name": "workflow-telemetry-action",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": false,
   "description": "Github action to collect metrics (CPU, memory, I/O, etc ...) from your workflows to help you debug and optimize your CI/CD pipeline",
   "main": "lib/main.js",
@@ -38,6 +38,8 @@
     "@actions/github": "^5.1.1",
     "@octokit/action": "^4.0.9",
     "@octokit/openapi-types": "^14.0.0",
+    "@rolldown/binding-darwin-arm64": "^1.2.0",
+    "@rollup/rollup-darwin-arm64": "^4.62.2",
     "axios": "^1.1.2",
     "sprintf-js": "^1.1.2",
     "systeminformation": "^5.11.15"
@@ -56,5 +58,6 @@
     "prettier": "^3.2.4",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"
-  }
+  },
+  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee"
 }
