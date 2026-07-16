@@ -58,6 +58,7 @@ function generateTraceChartForSteps(job: WorkflowJobType): string {
     '',
     '<details>',
     '<summary>Step Trace</summary>',
+    '',
     '```mermaid' + '\n' + chartContent + '\n' + '```',
     '</details>'
   ]
